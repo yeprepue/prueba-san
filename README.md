@@ -1,35 +1,35 @@
 ---
-languages: ["java", "markdown", "yaml"]
+idiomas: ["java", "markdown", "yaml"]
 ---
 
-# Prueba SAN Project Instructions
+# Instrucciones del proyecto Prueba SAN
 
-## Spell Check Configuration
+## Configuración del corrector ortográfico
 
-This project uses Spanish domain terminology. The following words are intentional and should not be flagged as misspellings:
+Este proyecto utiliza terminología propia del ámbito español. Las siguientes palabras se utilizan de forma intencionada y no deben marcarse como errores ortográficos:
 
-### Spanish Domain Terms
+### Términos propios del ámbito español
 - Cliente (Customer)
-- cliente (customer - lowercase)
-- infraestructure (infrastructure - project-specific naming)
-- prueba (test/proof - project name)
-- Nombre (Name)
-- nombre (name - lowercase)
-- Conversiones (Conversions)
-- Contrato (Contract)
-- Producto (Product)
-- segmento (segment)
+- cliente (customer - minúscula)
+- infraestructura (nomenclatura específica del proyecto)
+- prueba (nombre del proyecto)
+- Nombre
+- nombre (minúscula)
+- Conversiones
+- Contrato
+- Producto
+- segmento
 
-## Code Quality Standards
+## Estándares de calidad del código
 
-1. **Stream API**: Use `.toList()` instead of `.collect(Collectors.toList())` (Java 16+)
-2. **Null Safety**: Annotate nullable parameters with `@javax.annotation.Nullable`
-3. **Clean Architecture**: Follow domain-driven design with clear separation of concerns:
-   - `domain` - business logic and interfaces
-   - `infraestructure` - technical implementations
-   - `application` - use cases and orchestration
+1. **API de flujos**: Utilice `.toList()` en lugar de `.collect(Collectors.toList())` (Java 16+)
+2. **Seguridad ante valores nulos**: Anote los parámetros nulos con `@javax.annotation.Nullable`
+3. **Arquitectura limpia**: Siga el diseño orientado al dominio con una clara separación de responsabilidades:
+   - `domain` - lógica de negocio e interfaces
+   - `infraestructura` - implementaciones técnicas
+   - `aplicación` - casos de uso y orquestación
 
-## Project Structure
-- **Domain**: Pure business logic, no dependencies
-- **Infrastructure**: Spring, JPA, Database adapters
-- **Application**: Use cases and service orchestration
+## Estructura del proyecto
+- **Dominio**: Lógica de negocio pura, sin dependencias
+- **Infraestructura**: Spring, JPA, adaptadores de base de datos
+- **Aplicación**: Casos de uso y orquestación de servicios
