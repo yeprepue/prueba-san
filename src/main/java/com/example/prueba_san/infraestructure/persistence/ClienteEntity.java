@@ -14,5 +14,6 @@ public class ClienteEntity {
     private String nombre;
     private String email;
     private String segmento;
-    private Integer activo;
+    @Column(columnDefinition = "bit")
+    private Boolean activo;
 }

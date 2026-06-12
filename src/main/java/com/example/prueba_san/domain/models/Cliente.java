@@ -6,13 +6,13 @@ public class Cliente {
     private String nombre;
     private String email;
     private String segmento;
-    private Integer activo;  // En tu DB es numeric, usa Integer
+    private Boolean activo;
 
     public Cliente() {
 
     }
 
-    public Cliente(Long id, String nombre, String email, String segmento, Integer activo) {
+    public Cliente(Long id, String nombre, String email, String segmento, Boolean activo) {
         this.id = id;
         this.nombre = nombre;
         this.email = email;
@@ -52,11 +52,11 @@ public class Cliente {
         return segmento;
     }
 
-    public void setActivo(Integer activo) {
+    public void setActivo(Boolean activo) {
         this.activo = activo;
     }
 
-    public Integer getActivo() {
+    public Boolean getActivo() {
         return activo;
     }
 }
