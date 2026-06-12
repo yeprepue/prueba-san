@@ -1,54 +1,62 @@
 package com.example.prueba_san.domain.models;
 
 public class Cliente {
-    
+
     private Long id;
     private String nombre;
     private String email;
     private String segmento;
-    private Bolean activo; 
-    
+    private Integer activo;  // En tu DB es numeric, usa Integer
 
-    public Cliente (){
+    public Cliente() {
 
     }
 
-    public Cliente (Long, String, String, String, Bolean){
+    public Cliente(Long id, String nombre, String email, String segmento, Integer activo) {
         this.id = id;
         this.nombre = nombre;
         this.email = email;
         this.segmento = segmento;
         this.activo = activo;
     }
-    
-    public void setId(Long id){
+
+    public void setId(Long id) {
         this.id = id;
     }
-    public Long getId(){
+
+    public Long getId() {
         return id;
     }
-    public void setNombre(String nombre){
+
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public String getNombre(){
+
+    public String getNombre() {
         return nombre;
     }
-    public void setEmail(String email){
+
+    public void setEmail(String email) {
         this.email = email;
     }
-    public String getEmail(){
+
+    public String getEmail() {
         return email;
     }
-    public void setSegmento(String segmento){
+
+    public void setSegmento(String segmento) {
         this.segmento = segmento;
     }
-    public String getSegmento(){
+
+    public String getSegmento() {
         return segmento;
     }
-    public void setActivo(Bolean activo){
+
+    public void setActivo(Integer activo) {
         this.activo = activo;
     }
-    public Bolean getActivo(){
+
+    public Integer getActivo() {
         return activo;
     }
 }
