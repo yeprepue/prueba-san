@@ -1,4 +1,4 @@
-package com.example.prueba_san.application.useCases;
+package com.example.prueba_san.aplication.useCases;
 
 import java.util.List;
 import java.util.Optional;

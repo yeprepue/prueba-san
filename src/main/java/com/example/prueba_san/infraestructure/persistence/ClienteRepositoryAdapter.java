@@ -1,11 +1,13 @@
 package com.example.prueba_san.infraestructure.persistence;
 
-import com.example.prueba_san.domain.models.Cliente;
-import com.example.prueba_san.domain.ports.ClienteRepository;
-import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
+
+import org.springframework.lang.Nullable;
+import org.springframework.stereotype.Component;
+
+import com.example.prueba_san.domain.models.Cliente;
+import com.example.prueba_san.domain.ports.ClienteRepository;
 
 @Component
 public class ClienteRepositoryAdapter implements ClienteRepository {
@@ -20,7 +22,7 @@ public class ClienteRepositoryAdapter implements ClienteRepository {
     public List<Cliente> findAll() {
         return jpaClienteRepository.findAll().stream()
             .map(this::toDomain)
-            .collect(Collectors.toList());
+            .toList();
     }
     
     @Override
@@ -30,7 +32,7 @@ public class ClienteRepositoryAdapter implements ClienteRepository {
     }
     
     @Override
-    public Cliente save(Cliente cliente) {
+    public Cliente save(@Nullable Cliente cliente) {
         ClienteEntity entity = toEntity(cliente);
         ClienteEntity saved = jpaClienteRepository.save(entity);
         return toDomain(saved);
@@ -50,7 +52,7 @@ public class ClienteRepositoryAdapter implements ClienteRepository {
     public List<Cliente> findByNombreContaining(String nombre) {
         return jpaClienteRepository.findByNombreContaining(nombre).stream()
             .map(this::toDomain)
-            .collect(Collectors.toList());
+            .toList();
     }
     
     // Conversiones
